@@ -1,0 +1,46 @@
+'''
+print函数的sep和end参数：
+  sep='',输出对象间隔符号，一般为空格，
+  end=''，行尾符，一般为\n
+字符串的操作
+  （1）索引：
+    (R/r)index()：索引字符串返回其所在第一个位置的下标，若字符不存在则报错，R/r返回索引字符所在位置的最大下标
+    (R/r)find()：索引字符串返回其所在第一个位置的下标，若字符不存在则返回-1，R/r返回索引字符所在位置的最大下标
+  （2）切片：
+    str[start:end:step]
+r/R+字符的作用：表示原生字符串，取消转义字符等的作用
+
+'''
+# print()函数参数：
+#     sep=:输出对象间隔符号设定，一般默认为空格
+#     end=：设置输出的行尾符，一般默认为"\n"，
+# r/R+字符串：表示原生字符串，取消转义等意义
+
+# print("xiaoming said:\"i am xiaoming\"")
+# print('''shayebushi1
+#     nihaibiebuxing1
+#         zhentmdeshabi''')
+# print("""   赠汪伦
+#     李白
+# 李白乘舟将欲行，
+# 忽闻岸上踏歌声。
+# 桃花潭水深千尺，
+# 不及汪伦送我情。""")
+# word="zhangsan"
+# # 字符串切片：
+# # m[start:end:step]
+# print(word[0:len(word): 2])
+
+'''字符串常见操作：
+1，获取字符串长度：len(_str)
+2,查找字符：str.find("x",startfindindex,endfindindex),返回对应字符位置所在下标，没有该字符返回-1,rfind():返回所朝招字符的最大下标，用法同find
+           str.index("x"),返回对应字符所在下标，没有该字符报错，rindex()返回所1查找字符的最大下标，用法同index
+3，
+
+'''
+w="word"
+print(w.find('w'))
+print(w.find('o'))
+print(w.index('d'))
+print(w.find('a'))#-1
+print(w.index('a')) #ValueError: substring not found
