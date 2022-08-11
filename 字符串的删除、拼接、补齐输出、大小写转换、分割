@@ -1,0 +1,63 @@
+# 字符串判断函数：str.startswith(x),str.endswith(x)返回值为True或False
+#               isalpha():判断对象是否是纯字符型字符串，返回值为True或False
+#               isdigit():判断对象是否为纯数字型字符串，返回值为True或False
+#               isalnum():判断对象是否  只  由数字和字符串组成，返回值为True或False
+#               isspace()：判断对象是否全部由空格组成，返回值为True或False
+# replace()函数：替换对应位置的字符串，但是由于字符串是不可变量，因此不会对源字符串进行改变，而是创建一个新的变量用于储存替换后的字符串
+# x='shayebushi'
+# print(x.startswith('s'))#True
+# print(x.endswith('i'))#True
+# print(x.startswith('m'))#False
+# print(x.endswith('s'))#False
+# m='123'
+# print(m.isdigit())#True
+# a=x.replace('s','y')
+# print(x)#shayebushi
+# print(a)#yhayebuyhi
+
+
+
+#字符串分割函数split和splitlines,partition,rpartition
+#str.split('分割对象',分割数量)，从左往右分割，结果是一个list
+#rsplit('分割对象',分割数量)，从右往左分割，结果是一个list
+# x='zhangsan-lisi-wangwu-zhaoliu-liuqi-zhaoba-wujiu-liushi'
+# print(x.split('-'))#['zhangsan', 'lisi', 'wangwu', 'zhaoliu', 'liuqi', 'zhaoba', 'wujiu', 'liushi']
+# print(x.rsplit('-'))#['zhangsan', 'lisi', 'wangwu', 'zhaoliu', 'liuqi', 'zhaoba', 'wujiu', 'liushi']
+# print(x.rsplit('-', 3))#['zhangsan-lisi-wangwu-zhaoliu-liuqi', 'zhaoba', 'wujiu', 'liushi']
+# print(x.split('-',3))#['zhangsan', 'lisi', 'wangwu', 'zhaoliu-liuqi-zhaoba-wujiu-liushi']
+#str.（r）pattition('分割对象'),结果为元组，rpartiton()用法同partition，作用方式同rsplit
+# print('ewiyvfewuew'.partition('w'))#有多个分割对象时，只取第一个作为分割对象
+#str.capitalize():str  字符串的第一个字母  大写
+# print('shayebush1'.capitalize())#Shayebush1
+
+
+
+#全大写小写转换：upper(),lower(),会将字符串里的全部小写转换成大写，全部大写转换成小写,title()将每个首字母大写
+# x1='gewiufvoeblf'#GEWIUFVOEBLF
+# x2='OUIWEFYVEDBOIUI'#ouiwefyvedboiui
+# x3='OI;EILVDowefliwehf webjf'#OI;EILVDOWEFLIWEHF WEBJF,,,oi;eilvdowefliwehf webjf
+# print(x1.upper(),x2.lower(),x3.upper(),x3.lower(),sep='\n')
+# x4='ycg tcy boib;l vli ogiol,dbuli.2lyvid,vyidv.'
+# print(x4.title())#Ycg Tcy Boib;L Vli Ogiol,Dbuli.2Lyvid,Vyidv.
+
+
+#ljust(length,'补齐符号'):让字符串以指定长度输出，长度不够默认右边空格补齐，可自定义补齐符号
+#rjust(length,'补齐符号'):让字符串以指定长度输出，长度不够默认左边空格补齐，可自定义补齐符号
+#center(length,'补齐符号'):让字符串居中显示，长度不够默认补空格，可自定义补齐符号
+# print('evky'.ljust(6,'-'))#evky--
+# print('evky'.rjust(6,'='))#==evky
+
+
+
+#l/rstrip('指定删除内容')函数:删除字符串左右两边的指定字符串
+#strip('指定删除内容'):将字符串左右两边的空格全部去除
+# print('   wedhiewdl     '.lstrip())
+# print('   wedhiewdl     '.rstrip())
+# print('   wedhiewdl     '.strip())
+
+
+#将列表转换成字符串,使用拼接符join():'拼接方式'.join(拼接对象<需要可以迭代>)，拼接方式：在  迭代对象个体后  依次添加上'拼接方式'，最后结果为字符串
+x=['hangle','windows','iostream','stdio','std','namespace']
+print(str(x))
+print(type(str(x)))
+print(','.join(x))
