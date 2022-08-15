@@ -1,0 +1,71 @@
+# from itertools import product
+# from PIL import Image
+# import matplotlib.pyplot as plt
+# img=Image.open("C:\\Users\\南徽玉\\Desktop\\test1.jpg")
+# width,height=img.size
+# for pos in product(range(width),range(height)):
+#     if sum(img.getpixel(pos)[:3])>500:
+#         img.putpixel(pos,(255,255,255))
+# img.save("save.jpg","JPG")
+# fig=plt.figure(figsize=(20,40))
+# fig.add_subplot(1,2,1)
+# plt.imshow(Image.open("C:\\Users\\南徽玉\\Desktop\\test1.jpg"))
+# plt.axis('off')
+# print('DONE!')
+
+
+#查看字符对应的编码及编码对应的字符，使用内置函数chr()和ord()
+# print(chr(65))
+# print(ord('A'))
+
+
+#成员运算符 :in 和  not in
+#判断一个可迭代对象是否存在某对象
+
+
+#列表：使用[]来表示一个列表，列表里每一个元素称为元素，元素之间使用逗号进行分隔
+#list属于可迭代对象，可使用内置list函数或者直接使用[]将多个可迭代对象转换成列表
+#可通过下标访问，用法同字符串
+#列表数据可以被修改
+
+name=list(("zhangsan","caixukun","lisi","xiaoheizi","jinitaimei","giegie"))
+# print(name)#['zhangsan', 'caixukun', 'lisi', 'xiaoheizi']
+# print(type(name))#<class 'list'>
+
+# name[2]="程咬金"
+# print(name)#['zhangsan', 'caixukun', '程咬金', 'xiaoheizi']
+
+#支持下标切片[...)
+# print(name[2:5])#['lisi', 'xiaoheizi']
+
+#列表的增删改查
+#增：append()在列表最后追加，
+# insert(下标，插入对象):指定下标插入对象
+#extend(),在列表后面追加一个列表
+
+
+name.append("啥也不是")
+print(name)#['zhangsan', 'caixukun', 'lisi', 'xiaoheizi', 'jinitaimei', 'giegie', '啥也不是']
+name.insert(0,"libai")
+print(name)#['libai', 'zhangsan', 'caixukun', 'lisi', 'xiaoheizi', 'jinitaimei', 'giegie', '啥也不是']
+
+name1=["wo","shi","ni","die"]
+name.extend(name1)
+print(name)#['libai', 'zhangsan', 'caixukun', 'lisi', 'xiaoheizi', 'jinitaimei', 'giegie', '啥也不是', 'wo', 'shi', 'ni', 'die']
+
+#删除：
+#pop():删除列表里最后一个数据，返回被删除的对象，可以指定删除对象下标
+#remove("指定删除对象"):指定删除对象，若指定元素不存在，则报错
+#clear():清空列表，但保留对象
+#del _list:p指定删除对象，若不指定则删除列表，不保留对象
+# del name[2]
+# print(name)
+# del name
+# print(name)#报错列表不存在
+
+#查：
+#index():用法同字符串,不存在则报错
+#count():统计对象在列表中出现的次数
+# print(name.count(name[1]))
+
+#修改：使用下标可直接修改列表元素
