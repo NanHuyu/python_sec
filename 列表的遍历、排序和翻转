@@ -1,0 +1,64 @@
+#列表的循环遍历
+#while  和   for...in
+# a_list=["libai","lanlingwang","hanxin","zhaoyun","ake","sunwukong","simayi"]
+# for i in a_list:
+#     print(i)
+# print("-----------------------")
+# i=0
+# while i<len(a_list):
+#     print(a_list[i])
+#     i+=1
+
+#交换两个变量的值
+# a=1
+# b=2
+#方法一：直接交换
+# a,b=b,a
+#方法二：第三方变量法
+# c=a
+# a=b
+# b=c
+#方法三：运算符法,只限于数字
+# a=a+b
+# b=a-b
+# a=a-b
+
+
+
+#冒泡排序:
+"""
+细节问题：
+    两次循环比较次数均可少一次，最后一次比较必然是成立的
+    if比较内容为：前一个数和后一个数，j与j+1
+
+"""
+# a=[]
+# num=int(input("请输入你想输入的数据个数！"))
+# for i in range(num):
+#     temp=int(input())
+#     a.append(temp)
+# print("你输入的数据是：")
+# print(a)
+# for i in range(len(a)-1):
+#     for j in range(len(a)-1-i):
+#         if a[j]>a[j+1]:
+#             a[j],a[j+1]=a[j+1],a[j]
+# print(a)
+
+#利用sort([reverse=False])函数对数字列表进行排序:reverse参数为False时默认从小到大，为True时从大到小
+# a_list=[4,3,6,8,1,9,7,2]
+# a_list.sort()
+# print(a_list)#[1, 2, 3, 4, 6, 7, 8, 9]
+# a_list.sort(reverse=True)
+# print(a_list)#[9, 8, 7, 6, 4, 3, 2, 1]
+
+#利用sorted(list,[reverse=False])函数对数字列表进行排序:reverse参数为False时默认从小到大，为True时从大到小,排序时生成一个新的列表,不改变原有列表值
+# a=[3,6,1,7,2,9,0]
+# x=sorted(a,reverse=True)
+# print(x)#[9, 7, 6, 3, 2, 1, 0]
+
+#列表的翻转：reverse()函数,也可利用切片[::-1]实现
+a_list=[1,2,3,4,5,6,7,8,9,0]
+a_list.reverse()
+print(a_list)#[0, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
